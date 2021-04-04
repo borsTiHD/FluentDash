@@ -89,7 +89,7 @@ pingURL="www.borstihd.de"
 
 
 ;-- Network Adapter --
-NetworkAdapterNumber=1
+NetworkAdapterNumber=Best
 
 ;-- DOWN-/UPLOAD SPEED --
 ;Set these for sure
