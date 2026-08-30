@@ -2,11 +2,14 @@
 
 ;-- FONTS --
 
-Font=Century Gothic
-;Font=GeosansLight
+Font=SF Pro Display
+;Font=Century Gothic
 
 fontSize=12
 fontSizeSmaller=10
+
+;SF Pro Display (iOS-Schrift) liegt in #@#Fonts und wird von Rainmeter
+;dort automatisch geladen (wie bei Monterey). Hinweis in #Font# oben.
 
 ;-- COLORS --
 
@@ -85,6 +88,29 @@ highlightColor=#grey50BrightAlpha#
 dataColor=#lightgreen900#
 bgColor=#grey900#
 circleColor=#grey300#
+
+;-- iOS SEMANTIC COLORS (Monterey Style) --
+;Threshold colors for the round load rings: <75% green, 75-90% yellow, >=90% red.
+GreenColor=2dd255
+YellowColor=ffc70a
+RedColor=eb5546
+YellowStarts=75
+RedStarts=90
+
+;-- Load ring default colors (set dynamically by IfConditions) --
+CPUavgColor=#GreenColor#
+CPU1Color=#GreenColor#
+CPU2Color=#GreenColor#
+CPU3Color=#GreenColor#
+CPU4Color=#GreenColor#
+CPU5Color=#GreenColor#
+CPU6Color=#GreenColor#
+CPU7Color=#GreenColor#
+CPU8Color=#GreenColor#
+GPUloadColor=#GreenColor#
+VRAMColor=#GreenColor#
+FanSpeedColor=#GreenColor#
+
 pingURL="www.borstihd.de"
 
 
@@ -279,5 +305,5 @@ Unit=m
 ;Please make PostFixUnit a CAPITAL, so that it shows up correctly. C or F.
 PostFixUnit=C
 
-Substitute="tornado":"Tornado","Tornado":"Tornado","tropical":"tropischer","Tropical":"tropischer","storm":"Sturm","Storm":"Sturm","severe":"heftiges","Severe":"heftiges","thunderstorms":"Gewitter","Thunderstorms":"Gewitter","mixed":"gemischter","Mixed":"gemischter","rain":"Regen","Rain":"Regen","and":"und","And":"und","snow":"Schnee","Snow":"Schnee","sleet":"Graupel","Sleet":"Graupel","freezing":"gefrierender","Freezing":"gefrierender","drizzle":"Nieselregen","Drizzle":"Nieselregen","snow showers":"Schneeschauer","Snow showers":"Schneeschauer","shower":"Schauer","Shower":"Schauer"," flurries":"wirbel","light":"leichter","Light":"leichter","blowing":"st�rmischer","Blowing":"st�rmischer","hail":"Hagel","Hail":"Hagel","dust":"Staub","Dust":"Staub","foggy":"Nebel","Foggy":"Nebel","haze":"Dunst","Haze":"Dunst","smoky":"Rauch","Smoky":"Rauch","blustery":"Toben","Blustery":"Toben","windy":"Wind","Windy":"Wind","cold":"kalt","Cold":"kalt","Cloudy":"bew�lkt","cloudy":"bew�lkt","mostly":"meist","Mostly":"meist","(night)":"nachts","(day)":"(tags)","clear":"klar","Clear":"klar","sunny":"sonnig","Sunny":"sonnig","fair":"angenehm","Fair":"Angenehm","hot":"heiss","Hot":"Heiss","isolated":"vereinzelt","Isolated":"Vereinzelt","scatterd":"h�ufige","Scatterd":"H�ufige","heavy":"heftiger","Heavy":"Heftiger","partly":"teilweise","Partly":"Teilweise","thundershowers":"Gewitterregen","Thundershowers":"Gewitterregen","in the p.m.":"am Abend","in the a.m.":"am Morgen","with a few":"mit ein paar","A little":"Ein wenig","mainly early":"vorwiegend fr�h","mainly later":"vorwiegend sp�t","A bit of morning":"Ein wenig Morgen-","chilly":"frostig","with a little":"mit ein wenig","Remaining":"Es bleibt","very":"sehr","Chilly":"Frostig"
+Substitute="tornado":"Tornado","Tornado":"Tornado","tropical":"tropischer","Tropical":"tropischer","storm":"Sturm","Storm":"Sturm","severe":"heftiges","Severe":"heftiges","thunderstorms":"Gewitter","Thunderstorms":"Gewitter","mixed":"gemischter","Mixed":"gemischter","rain":"Regen","Rain":"Regen","and":"und","And":"und","snow":"Schnee","Snow":"Schnee","sleet":"Graupel","Sleet":"Graupel","freezing":"gefrierender","Freezing":"gefrierender","drizzle":"Nieselregen","Drizzle":"Nieselregen","snow showers":"Schneeschauer","Snow showers":"Schneeschauer","shower":"Schauer","Shower":"Schauer"," flurries":"wirbel","light":"leichter","Light":"leichter","blowing":"stürmischer","Blowing":"stürmischer","hail":"Hagel","Hail":"Hagel","dust":"Staub","Dust":"Staub","foggy":"Nebel","Foggy":"Nebel","haze":"Dunst","Haze":"Dunst","smoky":"Rauch","Smoky":"Rauch","blustery":"Toben","Blustery":"Toben","windy":"Wind","Windy":"Wind","cold":"kalt","Cold":"kalt","Cloudy":"bewölkt","cloudy":"bewölkt","mostly":"meist","Mostly":"meist","(night)":"nachts","(day)":"(tags)","clear":"klar","Clear":"klar","sunny":"sonnig","Sunny":"sonnig","fair":"angenehm","Fair":"Angenehm","hot":"heiss","Hot":"Heiss","isolated":"vereinzelt","Isolated":"Vereinzelt","scatterd":"häufige","Scatterd":"Häufige","heavy":"heftiger","Heavy":"Heftiger","partly":"teilweise","Partly":"Teilweise","thundershowers":"Gewitterregen","Thundershowers":"Gewitterregen","in the p.m.":"am Abend","in the a.m.":"am Morgen","with a few":"mit ein paar","A little":"Ein wenig","mainly early":"vorwiegend früh","mainly later":"vorwiegend spät","A bit of morning":"Ein wenig Morgen-","chilly":"frostig","with a little":"mit ein wenig","Remaining":"Es bleibt","very":"sehr","Chilly":"Frostig"
 SubstituteDay="Monday":"Montag","Tuesday":"Dienstag","Wednesday":"Mittwoch","Thursday":"Donnerstag","Friday":"Freitag","Saturday":"Samstag","Sunday":"Sonntag"

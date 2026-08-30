@@ -2,12 +2,6 @@
 
 Rainmeter skin collection "FluentDash" (fork/adaptation of Mazeby/FluentDash). Each subfolder is one widget skin. Config only — no build, test, or lint tooling; verification is manual (reload the skin in Rainmeter).
 
-## File encoding (critical gotcha)
-
-- Several `.ini` files are saved as **UTF-16 LE with BOM** and the Read/Edit tools refuse them as "binary": `CPUdash\CPUdash-{2,4,6,8}core.ini`, `GPUdash\GPUdash.ini`, `iCUEdash\iCUEWatercooler.ini`, `SSDdash\SSDdash.ini`, `SSDdash\SSDdash_wide.ini`, `WEATHERdash\WEATHERdash.ini`. Work with them via PowerShell: `[Text.Encoding]::Unicode.GetString([IO.File]::ReadAllBytes($path))`, and write back with `Set-Content -Encoding Unicode`.
-- Everything else (`Variables.inc`, `DATEdash`, `MUSICdash`, `NETWORKdash`, `NOTESdash`, `RAMdash`, and all `@Resources\*`) is plain UTF-8 / ANSI. Mixed encodings across files is intentional and varies; preserve each file's existing encoding when saving — don't convert UTF-16 files to UTF-8 or re-encode others, it bloats diffs and garbles umlauts.
-- `Variables.inc` already contains literal `�` (U+FFFD, bytes `EF BF BD`) where German umlauts were lost in the weather `Substitute` dict (`st�rmischer`, `bew�lkt`). Don't "fix" these into real umlauts — that byte sequence is a working state of the file. Non-ASCII German text lives throughout comments and substitute strings; Rainmeter has no escapes, so write literal chars.
-
 ## Layout & wiring
 
 - Root `Variables.inc` is the central config; every dash includes it with `@include=../Variables.inc`. It holds the font, Material color palette (`<name>500`/`<name>900`), user options, SSD drive letters `D1`..`D8`, network adapter + ping target, weather `WeatherCode`/`Unit`, and all HWiNFO sensor IDs. When a measure needs a new value, add a variable here and reference it with `#VarName#`.
@@ -25,4 +19,4 @@ Rainmeter skin collection "FluentDash" (fork/adaptation of Mazeby/FluentDash). E
 
 ## Conventions
 
-- Commit messages use gitmoji-style emoji prefixes + area, e.g. `fix: 🐛 ...`, `feat: 🎨 ...`, `✨ <Area> >> <description>`; German and English both appear.
+- Use single line conventional commit messages in englisch if asked
