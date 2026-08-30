@@ -190,8 +190,9 @@ HWiNFO-GPU0-SensorInstance=0x14
 HWiNFO-GPU0-Usage=0x7000000
 ; HWiNFO-GPU0-TotalGPUPower=0x80000fa
 HWiNFO-GPU0-Temp=0x1000000
-HWiNFO-GPU0-VRAM=0x80000fd
-; 0x80000fd = "GPU D3D Memory Dedicated" (MB) - VRAMUsage nutzt current value, VRAM das maximum als Gesamtspeicher
+; Physischer VRAM der GPU in MB (RTX 4080 = 16 GiB, aus HardwareInformation.qwMemorySize = 16376 MB)
+HWiNFO-GPU0-VRAMMemoryTotal=16376
+; 0x80000fd = "GPU D3D Memory Dedicated" (MB) - belegter dedizierter VRAM (CurrentValue)
 HWiNFO-GPU0-VRAMUsage=0x80000fd
 HWiNFO-GPU0-VRAMClock=0x6000004
 HWiNFO-GPU0-Fan0=0x8000000
