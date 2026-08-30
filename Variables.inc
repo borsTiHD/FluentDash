@@ -88,6 +88,29 @@ highlightColor=#grey50BrightAlpha#
 dataColor=#lightgreen900#
 bgColor=#grey900#
 circleColor=#grey300#
+
+;-- iOS SEMANTIC COLORS (Monterey Style) --
+;Threshold colors for the round load rings: <75% green, 75-90% yellow, >=90% red.
+GreenColor=2dd255
+YellowColor=ffc70a
+RedColor=eb5546
+YellowStarts=75
+RedStarts=90
+
+;-- Load ring default colors (set dynamically by IfConditions) --
+CPUavgColor=#GreenColor#
+CPU1Color=#GreenColor#
+CPU2Color=#GreenColor#
+CPU3Color=#GreenColor#
+CPU4Color=#GreenColor#
+CPU5Color=#GreenColor#
+CPU6Color=#GreenColor#
+CPU7Color=#GreenColor#
+CPU8Color=#GreenColor#
+GPUloadColor=#GreenColor#
+VRAMColor=#GreenColor#
+FanSpeedColor=#GreenColor#
+
 pingURL="www.borstihd.de"
 
 
