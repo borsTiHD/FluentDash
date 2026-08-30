@@ -2,11 +2,14 @@
 
 ;-- FONTS --
 
-Font=Century Gothic
-;Font=GeosansLight
+Font=SF Pro Display
+;Font=Century Gothic
 
 fontSize=12
 fontSizeSmaller=10
+
+;SF Pro Display (iOS-Schrift) liegt in #@#Fonts und wird von Rainmeter
+;dort automatisch geladen (wie bei Monterey). Hinweis in #Font# oben.
 
 ;-- COLORS --
 
