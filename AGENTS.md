@@ -17,6 +17,13 @@ Rainmeter skin collection "FluentDash" (fork/adaptation of Mazeby/FluentDash). E
 - Sensor IDs / instances are bound to this machine's hardware; after a hardware change they must be re-read from HWiNFO (see commits "New GPU installed with new sensor id's"). HWiNFO must be running with shared memory enabled or those measures return nothing.
 - `@Resources\RedistrutablePlugin\{32,64}-bit\HWiNFO.dll` is the plugin that must be installed into Rainmeter's `Plugins\` directory for HWiNFO measures to work.
 
+## File encoding (important)
+
+- Rainmeter cannot read UTF-8 skin files correctly: a `°` in a UTF-8 file is shown as `Â°C` (UTF-8 without BOM is misread as ANSI; official docs say never use UTF-8 for `.ini`/`.inc`). UTF-16 LE works in Rainmeter but git treats it as binary, so it is avoided here.
+- Files that contain non-ASCII characters are therefore stored on disk as **ANSI / Windows-1252** (works on this German system; `°` = byte 0xB0, ä/ö/ü = 0xE4/0xF6/0xFC). Currently affected: `Variables.inc`, `CPUdash\CPUdash-8core.ini`, `GPUdash\GPUdash.ini`, `iCUEdash\iCUEWatercooler.ini`, `SSDdash\SSDdash.ini`, `SSDdash\SSDdash_wide.ini`, `WEATHERdash\WEATHERdash.ini`.
+- ASCII-only files are byte-identical in UTF-8 and ANSI and are fine as plain text.
+- When editing the affected files, keep them cp1252 (do NOT re-save as UTF-8). Expect `git diff` to render those bytes as `�` — that is only a display artifact; the file is correct.
+
 ## Conventions
 
 - Use single line conventional commit messages in englisch if asked
